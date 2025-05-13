@@ -1,0 +1,14 @@
+# pyproject.toml
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "tm1_demo_module"
+version = "1.0"
+
+[tool.setuptools]
+ext-modules = [
+    # `name` musi być zgodne z zawartością tm1_demo.c
+    { name = "tm1_demo", sources = ["tm1_demo.c"] }
+]
